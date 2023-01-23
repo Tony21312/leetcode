@@ -45,7 +45,7 @@ public:
                 bigger.pop();
                 temp = temp->next;
             }        
-        if(temp)
+        if(temp) // ensure the last ListNode point to nullptr
             temp->next = nullptr;
         return head;
     }
