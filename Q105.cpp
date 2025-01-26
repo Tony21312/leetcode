@@ -24,13 +24,7 @@ public:
     }
     TreeNode* build(vector<int>& preorder, vector<int>& inorder, int& rootIdx, int start, int end) {
         if(start > end) return nullptr;
-        int rootVal = preorder[rootIdx++];
-        TreeNode* root = new TreeNode(rootVal);
-        int idx = start;
-        while(inorder[idx] != rootVal) idx++;
-        root->left = build(preorder, inorder, rootIdx, start, idx - 1);
-        root->right = build(preorder, inorder, rootIdx, idx + 1, end);
-        return root;
+        
     }
 };
 // @lc code=end
